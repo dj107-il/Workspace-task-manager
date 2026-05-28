@@ -1,22 +1,32 @@
-<<<<<<< HEAD
-# Workspace-task-manager
-=======
-# React + Vite
+# 🚀 Workspace - Task Manager
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Aplicación web SPA para gestionar tareas de equipos de trabajo, con seguimiento de progreso y organización por estados.
 
-Currently, two official plugins are available:
+## 🛠️ Stack Tecnológico
+- React.js + Vite
+- React Router DOM
+- Tailwind CSS
+- SweetAlert2
+- MockAPI (REST API simulada)
+- LocalStorage (sesión simulada)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🔗 API Mockeada
+https://6a177f361878294b597b7b36.mockapi.io/tareas
 
-## React Compiler
+## ⚙️ Instalación y uso local
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+```bash
+# 1. Clonar el repositorio
+git clone https://github.com/dj107-il/Workspace-task-manager.git
 
-Note: This will impact Vite dev & build performances.
+# 2. Entrar a la carpeta
+cd workspace-task-manager
 
-## Expanding the ESLint configuration
+# 3. Instalar dependencias
+npm install
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
->>>>>>> 13fadb1 (feat: Estructuración como base del proyecto workspace-task-manager)
+# 4. Correr servidor de desarrollo
+npm run dev
+```
+
+Abrir en el navegador: http://localhost:5173
