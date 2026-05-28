@@ -1,6 +1,6 @@
 import { useNavigate } from 'react-router-dom'
 import { useState } from 'react'
-
+import Swal from 'sweetalert2'
 
 function Login() {
     // 10. Estados para el nombre y departamento. Donde el nombre empieza vacio y el departamenteo con 'Desarrollo'
@@ -15,11 +15,23 @@ function Login() {
         e.preventDefault()
         //Validación: nombre del usuario no puede estar vacio, mostrando un alert.
         if (nombre.trim() === '') {
-            alert('EL nombre de usuario debe ser obligatorio, intentalo nuevamente')
+            Swal.fire({
+                title: '¡Campo requerido!',
+                text: 'Por favor ingresa tu nombre de usuario',
+                icon: 'error',
+                confirmButtonColor: '#3b82f6'
+            })
             return
         }
         // Se guarda un objeto con nombre, departamento en el localstorage, convirtiendolo a string con JSON.stringify
         localStorage.setItem('usuario', JSON.stringify({ nombre, departamento }))
+        Swal.fire({
+            title: `¡Bienvenido, ${nombre}! 👋`,
+            text: `Ingresaste como ${departamento}`,
+            icon: 'success',
+            timer: 1500,          // Se cierra solo en 1.5 segundos
+            showConfirmButton: false
+        })
         // Redirige al usuario a la página del tablero
         navigate('/tablero')
     }
